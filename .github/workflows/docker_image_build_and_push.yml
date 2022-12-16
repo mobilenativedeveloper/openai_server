@@ -20,7 +20,7 @@ jobs:
         uses: docker/build-push-action@v1
         with:
           username: mobilenativedeveloper
-          password: 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
+          password: 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
           registry: docker.pkg.github.com
           repository: mobilenativedeveloper/openai_server/openai_server
           tag_with_ref: true
