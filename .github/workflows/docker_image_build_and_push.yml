@@ -1,0 +1,26 @@
+name: Image build and push
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check
+        uses: actions/checkout@v2
+
+      - name: Push to GitHub Packages
+        uses: docker/build-push-action@v1
+        with:
+          username: artemcodelab
+          password: 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
+          registry: docker.pkg.github.com
+          repository: artemcodelab/openai_server/openai_server
+          tag_with_ref: true
